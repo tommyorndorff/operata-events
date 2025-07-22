@@ -1,0 +1,30 @@
+# <type>[optional scope]: <description>
+#
+# [optional body]
+#
+# [optional footer(s)]
+#
+# Type can be:
+#   feat:     A new feature
+#   fix:      A bug fix
+#   docs:     Documentation only changes
+#   style:    Changes that do not affect the meaning of the code
+#   refactor: A code change that neither fixes a bug nor adds a feature
+#   perf:     A code change that improves performance
+#   test:     Adding missing tests or correcting existing tests
+#   build:    Changes that affect the build system or external dependencies
+#   ci:       Changes to our CI configuration files and scripts
+#   chore:    Other changes that don't modify src or test files
+#   revert:   Reverts a previous commit
+#
+# Breaking change footer should be:
+# BREAKING CHANGE: <description>
+#
+# Examples:
+#   feat: add support for HeartbeatWorkflow events
+#   fix(events): correct JSON tag for ContactID field
+#   docs: update README with new event types
+#   feat!: remove deprecated CallSummary.Legacy field
+#   feat: add validation helpers
+#   
+#   BREAKING CHANGE: Legacy field removed from CallSummary struct
