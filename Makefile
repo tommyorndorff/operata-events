@@ -29,11 +29,7 @@ clean: ## Clean build cache
 	rm -rf bin/
 
 lint: ## Run linter
-	@if command -v golangci-lint >/dev/null 2>&1; then \
-		golangci-lint run; \
-	else \
-		echo "golangci-lint not installed, skipping lint check"; \
-	fi
+	golangci-lint run
 
 fmt: ## Format code
 	$(GOFMT) -s -w .
@@ -50,7 +46,7 @@ coverage: test ## Generate coverage report
 	@echo "Coverage report generated: coverage.html"
 
 install-tools: ## Install development tools
-	$(GOGET) github.com/golangci/golangci-lint/cmd/golangci-lint@latest
+	go install github.com/golangci/golangci-lint/cmd/golangci-lint@latest
 	npm install -g @commitlint/cli @commitlint/config-conventional
 	npm install -g semantic-release @semantic-release/changelog @semantic-release/git @semantic-release/github
 

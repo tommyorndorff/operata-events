@@ -5,6 +5,14 @@ import (
 	"fmt"
 )
 
+// Event type constants for Operata EventBridge events
+const (
+	EventTypeCallSummary        = "CallSummary"
+	EventTypeInsightsSummary    = "InsightsSummary"
+	EventTypeAgentReportedIssue = "AgentReportedIssue"
+	EventTypeHeadsetSummary     = "HeadsetSummary"
+)
+
 // ParseEventBridgeEvent parses a generic EventBridge event and returns the appropriate typed event
 func ParseEventBridgeEvent(data []byte) (interface{}, error) {
 	var genericEvent EventBridgeEvent
@@ -13,28 +21,28 @@ func ParseEventBridgeEvent(data []byte) (interface{}, error) {
 	}
 
 	switch genericEvent.DetailType {
-	case "CallSummary":
+	case EventTypeCallSummary:
 		var event CallSummaryEvent
 		if err := json.Unmarshal(data, &event); err != nil {
 			return nil, fmt.Errorf("failed to parse CallSummary event: %w", err)
 		}
 		return &event, nil
 
-	case "InsightsSummary":
+	case EventTypeInsightsSummary:
 		var event InsightsSummaryEvent
 		if err := json.Unmarshal(data, &event); err != nil {
 			return nil, fmt.Errorf("failed to parse InsightsSummary event: %w", err)
 		}
 		return &event, nil
 
-	case "AgentReportedIssue":
+	case EventTypeAgentReportedIssue:
 		var event AgentReportedIssueEvent
 		if err := json.Unmarshal(data, &event); err != nil {
 			return nil, fmt.Errorf("failed to parse AgentReportedIssue event: %w", err)
 		}
 		return &event, nil
 
-	case "HeadsetSummary":
+	case EventTypeHeadsetSummary:
 		var event HeadsetSummaryEvent
 		if err := json.Unmarshal(data, &event); err != nil {
 			return nil, fmt.Errorf("failed to parse HeadsetSummary event: %w", err)
@@ -56,13 +64,13 @@ func IsOperataEvent(source string) bool {
 // GetEventTypeFromDetailType maps the detail-type to a more friendly event type name
 func GetEventTypeFromDetailType(detailType string) string {
 	switch detailType {
-	case "CallSummary":
+	case EventTypeCallSummary:
 		return "Call Summary"
-	case "InsightsSummary":
+	case EventTypeInsightsSummary:
 		return "Insights Summary"
-	case "AgentReportedIssue":
+	case EventTypeAgentReportedIssue:
 		return "Agent Reported Issue"
-	case "HeadsetSummary":
+	case EventTypeHeadsetSummary:
 		return "Headset Summary"
 	default:
 		return detailType
