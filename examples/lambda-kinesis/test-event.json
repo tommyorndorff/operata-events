@@ -1,0 +1,20 @@
+{
+  "Records": [
+    {
+      "kinesis": {
+        "kinesisSchemaVersion": "1.0",
+        "partitionKey": "contact-12345",
+        "sequenceNumber": "49624533336339516698928802055994541071234567890",
+        "data": "ewogICJpZCI6ICIxMjM0NTY3OC0xMjM0LTEyMzQtMTIzNC0xMjM0NTY3ODkwMTIiLAogICJkZXRhaWwtdHlwZSI6ICJDYWxsU3VtbWFyeSIsCiAgInNvdXJjZSI6ICJhd3MucGFydG5lci9vcGVyYXRhLmNvbS9jdXN0b21lci1ldmVudHMiLAogICJhY2NvdW50IjogIjEyMzQ1Njc4OTAxMiIsCiAgInRpbWUiOiAiMjAyNS0wNy0yMlQxMDozMDo0NVoiLAogICJyZWdpb24iOiAidXMtZWFzdC0xIiwKICAiZGV0YWlsIjogewogICAgImNvbnRhY3QiOiB7CiAgICAgICJpZCI6IHsKICAgICAgICAiY3VycmVudCI6ICJjb250YWN0LTEyMzQ1IgogICAgICB9LAogICAgICAiZGlyZWN0aW9uIjogIklOQk9VTkQiLAogICAgICAiZW5kZWRCeSI6ICJBR0VOVCIsCiAgICAgICJxdWV1ZU5hbWUiOiAiU3VwcG9ydCIsCiAgICAgICJjYWxsZXJJRCI6ICIrMTIzNDU2Nzg5MCIKICAgIH0sCiAgICAic2VydmljZUFnZW50IjogewogICAgICAiZnJpZW5kbHlOYW1lIjogIkpvaG4gRG9lIiwKICAgICAgInVzZXJuYW1lIjogImpvaG4uZG9lIiwKICAgICAgImludGVyYWN0aW9uIjogewogICAgICAgICJ0b3RhbER1cmF0aW9uU2VjIjogMTgwLAogICAgICAgICJ0YWxraW5nRHVyYXRpb25TZWMiOiAxNTAsCiAgICAgICAgIm9uSG9sZER1cmF0aW9uU2VjIjogMAogICAgICB9CiAgICB9LAogICAgIndlYlJUQ1Nlc3Npb24iOiB7CiAgICAgICJtZXRyaWNzIjogewogICAgICAgICJpbmJvdW5kIjogewogICAgICAgICAgInBhY2tldHNMb3N0UGVyY2VudGFnZSI6IDAuMDUKICAgICAgICB9LAogICAgICAgICJvdXRib3VuZCI6IHsKICAgICAgICAgICJwYWNrZXRzTG9zdFBlcmNlbnRhZ2UiOiAwLjAzCiAgICAgICAgfSwKICAgICAgICAibW9zIjogewogICAgICAgICAgImF2ZyI6IDQuNQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0KfQ==",
+        "approximateArrivalTimestamp": 1721641845.123
+      },
+      "eventSource": "aws:kinesis",
+      "eventVersion": "1.0",
+      "eventID": "shardId-000000000000:49624533336339516698928802055994541071234567890",
+      "eventName": "aws:kinesis:record",
+      "invokeIdentityArn": "arn:aws:iam::123456789012:role/lambda-kinesis-role",
+      "awsRegion": "us-east-1",
+      "eventSourceARN": "arn:aws:kinesis:us-east-1:123456789012:stream/operata-events"
+    }
+  ]
+}
