@@ -1,0 +1,32 @@
+{
+  "name": "operata-events",
+  "version": "0.0.0-development",
+  "description": "Go module providing type definitions for Operata's EventBridge event catalog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tommyorndorff/operata-events.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@commitlint/cli": "^18.0.0",
+    "@commitlint/config-conventional": "^18.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.0.0",
+    "semantic-release": "^22.0.0"
+  },
+  "scripts": {
+    "commit": "npx git-cz",
+    "release": "semantic-release",
+    "commit-lint": "npx commitlint --from HEAD~1 --to HEAD --verbose"
+  },
+  "keywords": [
+    "operata",
+    "eventbridge",
+    "aws",
+    "events",
+    "golang",
+    "types"
+  ]
+}
